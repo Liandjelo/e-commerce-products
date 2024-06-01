@@ -1,0 +1,191 @@
+body{
+    margin: 0px;
+    font-family:  Helvetica, sans-serif;
+}
+#grid-container{
+    display: grid;
+    grid-template-areas: "header"
+     "nav" "main" 
+     "footer";
+}
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    background-color: lightgray;
+    padding: 10px 20px 15px 20px;
+    align-items: center;
+    
+}
+
+
+#search-bar{
+    width: 55%;
+}
+#search-bar input{
+    width: 90%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+}
+#hero-image{
+    background-image: url(images/hero-bg.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    background-size: 100% 100%;
+    gap: 2%;
+    flex-flow: row wrap;
+    padding: 15px;
+}
+#hero-image p:nth-child(2){
+    font-size: 35px;
+    font-weight: 700;
+}
+#hero-description{
+    width: 400px;
+}
+#hero-description p:nth-child(1){
+    font-size: 12px;
+    font-weight: 800;
+    color: rgb(11, 137, 233);
+}
+#hero-description #hero-button p{
+    font-weight: 700;
+    border: 1px solid rgb(11, 137, 233);
+    width: 100px;
+    padding: 12px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 11px;
+   
+}
+nav
+{
+   
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    padding: 15px;
+    gap: 55px;
+}
+nav div a {
+    text-decoration: none;
+    color: gray;
+}
+main {
+    grid-area: main;
+}
+footer{
+    grid-area: footer;
+    background-color:  rgb(11, 137, 233);
+ margin-top: 10vh;
+ text-align: center;
+ color: #fff;
+ font-size: 12px;
+}
+#products{
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+    flex-flow: row wrap;
+}
+#products .items p:nth-child(1){
+   font-weight: 700;
+  height: 1px;
+}
+#products .items p:nth-child(2){
+    font-size: 10px;
+    color: rgb(140, 140, 140);
+ }
+ #products .items p:nth-child(4){
+    font-size: 12px;
+    font-weight: 800;
+    color: rgb(11, 137, 233);
+ }
+ #products .items p:nth-child(4) span{
+    font-size: 12px;
+    font-weight: 800;
+   text-decoration: line-through;
+   color: lightgray;
+ }
+#products .items{
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    width: 170px;
+    border-radius: 5px;
+    padding: 15px;
+}
+main #title{
+    text-align: center;
+    color: rgb(11, 137, 233);
+    font-weight: 700;
+    font-size: 18px;
+}
+@media (max-width:895px){
+    #products{
+        flex-direction: column;
+        align-items: center;
+    }
+   
+    #hero-icon img{
+        height: 200px;
+    }
+    #hero-image{
+        height: 450px;
+    }
+}
+@media (max-width:749px){
+    #products{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    footer{
+        margin-top: 70vh;
+    }
+
+}
+@media (max-width:457px){
+    header input, header #cart-button{
+        display: none;
+    
+    }
+  header{
+    justify-content: center;
+    padding: 5px;
+  }
+  header #logo{
+  margin-left: 40%;
+  }
+  #grid-container{
+    grid-template-areas: "header"
+     "main" 
+     "nav" 
+     "footer";
+}
+nav{
+    margin-top: 10vh;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightgray;
+    gap: 10px;
+}
+nav div a{
+    color:  rgb(11, 137, 233);
+}
+footer{
+    margin-top: 0;
+}
+#hero-image img{
+   display: none;
+}
+main #hero-image{
+    height: 300px;
+    padding: 25px;
+}
+#products{
+    gap: 30px;
+}
+}
